@@ -16,6 +16,25 @@ namespace SiparisOtomasyon
         {
             InitializeComponent();
         }
-
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            if ((txtKullaniciAdi.Text == "Musteri" && txtSifre.Text == "1234") || (txtKullaniciAdi.Text == "Yonetici" && txtSifre.Text == "1234"))
+            {
+                if (txtKullaniciAdi.Text == "Musteri")
+                {
+                    Orders Order = new Orders();
+                    Order.Show();
+                }
+                else
+                {
+                    IncomingOrder Order = new IncomingOrder();
+                    Order.Show();
+                }
+            }
+            else
+            { 
+                MessageBox.Show("Hatalı Bilgi Girişi!"); 
+            }
+        }
     }
 }
