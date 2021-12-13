@@ -34,7 +34,7 @@ namespace SiparisOtomasyon
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnKayit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,21 +78,21 @@ namespace SiparisOtomasyon
             this.btnGiris.Text = "Giriş";
             this.btnGiris.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnKayit
             // 
-            this.button1.Location = new System.Drawing.Point(114, 124);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnKayit.Location = new System.Drawing.Point(114, 124);
+            this.btnKayit.Name = "btnKayit";
+            this.btnKayit.Size = new System.Drawing.Size(75, 23);
+            this.btnKayit.TabIndex = 5;
+            this.btnKayit.Text = "Kayıt Ol";
+            this.btnKayit.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 171);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnKayit);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtKullaniciAdi);
@@ -112,7 +112,7 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Button btnGiris;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnKayit;
     }
 }
 
