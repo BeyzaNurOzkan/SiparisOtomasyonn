@@ -9,7 +9,7 @@ namespace SiparisOtomasyon
 {
     public class Users
     {
-        SqlConnection connection = new SqlConnection("Data Source=USERPC;Initial Catalog=Siparis;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=USERPC\MSSQLSERVER01;Initial Catalog=Siparis;Integrated Security=True");
         public int UserID { get; private set; }
         public string Name { get; private set; }
         public string[,] UserAddress = new string[5, 3];
@@ -20,7 +20,6 @@ namespace SiparisOtomasyon
 
         public bool ConnectionQuery(string userName, string password)
         {
-
             SqlCommand cmd = new SqlCommand("select * from Users", connection);
             connection.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
@@ -98,7 +97,6 @@ namespace SiparisOtomasyon
                 cmd.ExecuteNonQuery();
                 connection.Close();
             }
-
         }
         public Users()
         {

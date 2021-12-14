@@ -29,17 +29,20 @@ namespace SiparisOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbxVergi = new System.Windows.Forms.ComboBox();
             this.btn_Sil = new System.Windows.Forms.Button();
             this.btn_Düzenle = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.txtÜrünAğirliği = new System.Windows.Forms.TextBox();
+            this.txtÜrünFiyat = new System.Windows.Forms.TextBox();
+            this.txtÜrünStok = new System.Windows.Forms.TextBox();
+            this.txtÜrünKod = new System.Windows.Forms.TextBox();
+            this.txtÜrünAdi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,6 +74,8 @@ namespace SiparisOtomasyon
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtAciklama = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -89,14 +94,19 @@ namespace SiparisOtomasyon
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txtAciklama);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.flowLayoutPanel1);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.cbxVergi);
             this.tabPage1.Controls.Add(this.btn_Sil);
             this.tabPage1.Controls.Add(this.btn_Düzenle);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.btnKaydet);
+            this.tabPage1.Controls.Add(this.txtÜrünAğirliği);
+            this.tabPage1.Controls.Add(this.txtÜrünFiyat);
+            this.tabPage1.Controls.Add(this.txtÜrünStok);
+            this.tabPage1.Controls.Add(this.txtÜrünKod);
+            this.tabPage1.Controls.Add(this.txtÜrünAdi);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
@@ -111,6 +121,30 @@ namespace SiparisOtomasyon
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ürünler";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 206);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(346, 148);
+            this.flowLayoutPanel1.TabIndex = 30;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(470, 155);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(36, 15);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Vergi:";
+            // 
+            // cbxVergi
+            // 
+            this.cbxVergi.FormattingEnabled = true;
+            this.cbxVergi.Location = new System.Drawing.Point(580, 147);
+            this.cbxVergi.Name = "cbxVergi";
+            this.cbxVergi.Size = new System.Drawing.Size(253, 23);
+            this.cbxVergi.TabIndex = 28;
             // 
             // btn_Sil
             // 
@@ -130,49 +164,50 @@ namespace SiparisOtomasyon
             this.btn_Düzenle.Text = "Düzenle";
             this.btn_Düzenle.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnKaydet
             // 
-            this.button1.Location = new System.Drawing.Point(759, 166);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnKaydet.Location = new System.Drawing.Point(758, 331);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(75, 23);
+            this.btnKaydet.TabIndex = 25;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // textBox5
+            // txtÜrünAğirliği
             // 
-            this.textBox5.Location = new System.Drawing.Point(581, 103);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(253, 23);
-            this.textBox5.TabIndex = 24;
+            this.txtÜrünAğirliği.Location = new System.Drawing.Point(580, 103);
+            this.txtÜrünAğirliği.Name = "txtÜrünAğirliği";
+            this.txtÜrünAğirliği.Size = new System.Drawing.Size(253, 23);
+            this.txtÜrünAğirliği.TabIndex = 24;
             // 
-            // textBox4
+            // txtÜrünFiyat
             // 
-            this.textBox4.Location = new System.Drawing.Point(581, 55);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(253, 23);
-            this.textBox4.TabIndex = 23;
+            this.txtÜrünFiyat.Location = new System.Drawing.Point(581, 55);
+            this.txtÜrünFiyat.Name = "txtÜrünFiyat";
+            this.txtÜrünFiyat.Size = new System.Drawing.Size(253, 23);
+            this.txtÜrünFiyat.TabIndex = 23;
             // 
-            // textBox3
+            // txtÜrünStok
             // 
-            this.textBox3.Location = new System.Drawing.Point(125, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 23);
-            this.textBox3.TabIndex = 22;
+            this.txtÜrünStok.Location = new System.Drawing.Point(125, 147);
+            this.txtÜrünStok.Name = "txtÜrünStok";
+            this.txtÜrünStok.Size = new System.Drawing.Size(248, 23);
+            this.txtÜrünStok.TabIndex = 22;
             // 
-            // textBox2
+            // txtÜrünKod
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 23);
-            this.textBox2.TabIndex = 21;
+            this.txtÜrünKod.Location = new System.Drawing.Point(125, 103);
+            this.txtÜrünKod.Name = "txtÜrünKod";
+            this.txtÜrünKod.Size = new System.Drawing.Size(248, 23);
+            this.txtÜrünKod.TabIndex = 21;
             // 
-            // textBox1
+            // txtÜrünAdi
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 23);
-            this.textBox1.TabIndex = 20;
+            this.txtÜrünAdi.Location = new System.Drawing.Point(125, 55);
+            this.txtÜrünAdi.Name = "txtÜrünAdi";
+            this.txtÜrünAdi.Size = new System.Drawing.Size(248, 23);
+            this.txtÜrünAdi.TabIndex = 20;
             // 
             // label6
             // 
@@ -240,10 +275,10 @@ namespace SiparisOtomasyon
             this.columnHeader7});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(27, 206);
+            listViewItem2});
+            this.listView1.Location = new System.Drawing.Point(27, 360);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(807, 244);
+            this.listView1.Size = new System.Drawing.Size(807, 90);
             this.listView1.TabIndex = 13;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -437,6 +472,22 @@ namespace SiparisOtomasyon
             this.label7.TabIndex = 0;
             this.label7.Text = "Kullanıcı Adı:";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(470, 206);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 15);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Açıklama";
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.Location = new System.Drawing.Point(580, 203);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(253, 23);
+            this.txtAciklama.TabIndex = 32;
+            // 
             // Executive
             // 
             this.ClientSize = new System.Drawing.Size(888, 560);
@@ -457,12 +508,12 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.TextBox txtÜrünAğirliği;
+        private System.Windows.Forms.TextBox txtÜrünFiyat;
+        private System.Windows.Forms.TextBox txtÜrünStok;
+        private System.Windows.Forms.TextBox txtÜrünKod;
+        private System.Windows.Forms.TextBox txtÜrünAdi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -499,5 +550,10 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cbxVergi;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TextBox txtAciklama;
+        private System.Windows.Forms.Label label13;
     }
 }
