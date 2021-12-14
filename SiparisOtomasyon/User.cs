@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SiparisOtomasyon
 {
-    public partial class IncomingOrder : Form
+    public partial class User : Form
     {
-        public IncomingOrder()
+        public User()
         {
             InitializeComponent();
         }

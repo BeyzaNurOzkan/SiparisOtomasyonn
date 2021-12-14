@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,25 +17,33 @@ namespace SiparisOtomasyon
         {
             InitializeComponent();
         }
+        public Users User = new Users();
+
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if ((txtKullaniciAdi.Text == "Musteri" && txtSifre.Text == "1234") || (txtKullaniciAdi.Text == "Yonetici" && txtSifre.Text == "1234"))
+
+            if (User.ConnectionQuery(txtKullaniciAdi.Text, txtSifre.Text))
             {
-                if (txtKullaniciAdi.Text == "Musteri")
+                if (User.State==true)
                 {
-                    Orders Order = new Orders();
-                    Order.Show();
+                    User User = new User();
+                    User.Show();
                 }
                 else
                 {
-                    IncomingOrder Order = new IncomingOrder();
-                    Order.Show();
+                    Executive Executive = new Executive();
+                    Executive.Show();
                 }
             }
             else
-            { 
-                MessageBox.Show("Hatalı Bilgi Girişi!"); 
+            {
+                MessageBox.Show("Hatalı Bilgi Girişi!");
             }
+        }
+        private void btnKayit_Click_1(object sender, EventArgs e)
+        {
+            Register Register = new Register();
+            Register.Show();
         }
     }
 }

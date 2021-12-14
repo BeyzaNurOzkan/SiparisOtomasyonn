@@ -34,6 +34,7 @@ namespace SiparisOtomasyon
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
+            this.btnKayit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,11 +79,22 @@ namespace SiparisOtomasyon
             this.btnGiris.UseVisualStyleBackColor = true;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
+            // btnKayit
+            // 
+            this.btnKayit.Location = new System.Drawing.Point(114, 124);
+            this.btnKayit.Name = "btnKayit";
+            this.btnKayit.Size = new System.Drawing.Size(75, 23);
+            this.btnKayit.TabIndex = 5;
+            this.btnKayit.Text = "Kayıt Ol";
+            this.btnKayit.UseVisualStyleBackColor = true;
+            this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 171);
+            this.Controls.Add(this.btnKayit);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtKullaniciAdi);
@@ -102,6 +114,7 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Button btnGiris;
+        private System.Windows.Forms.Button btnKayit;
     }
 }
 

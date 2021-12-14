@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SiparisOtomasyon
 {
-    public partial class Basket : Form
+    public partial class Executive : Form
     {
-        public Basket()
+        public Executive()
         {
             InitializeComponent();
         }
