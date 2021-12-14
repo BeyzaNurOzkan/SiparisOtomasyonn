@@ -29,9 +29,10 @@ namespace SiparisOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.cbxVergi = new System.Windows.Forms.ComboBox();
@@ -74,8 +75,7 @@ namespace SiparisOtomasyon
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtAciklama = new System.Windows.Forms.TextBox();
+            this.txtAciklama = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -121,6 +121,15 @@ namespace SiparisOtomasyon
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ürünler";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(470, 206);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 15);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Açıklama";
             // 
             // flowLayoutPanel1
             // 
@@ -275,10 +284,10 @@ namespace SiparisOtomasyon
             this.columnHeader7});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(27, 360);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(807, 90);
+            this.listView1.Size = new System.Drawing.Size(807, 110);
             this.listView1.TabIndex = 13;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -472,21 +481,13 @@ namespace SiparisOtomasyon
             this.label7.TabIndex = 0;
             this.label7.Text = "Kullanıcı Adı:";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(470, 206);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 15);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "Açıklama";
-            // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(580, 203);
+            this.txtAciklama.Location = new System.Drawing.Point(581, 203);
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(253, 23);
-            this.txtAciklama.TabIndex = 32;
+            this.txtAciklama.Size = new System.Drawing.Size(252, 99);
+            this.txtAciklama.TabIndex = 33;
+            this.txtAciklama.Text = "";
             // 
             // Executive
             // 
@@ -553,7 +554,7 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbxVergi;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.TextBox txtAciklama;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RichTextBox txtAciklama;
     }
 }
