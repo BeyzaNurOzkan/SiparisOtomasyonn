@@ -76,7 +76,7 @@ namespace SiparisOtomasyon
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(835, 565);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Kullanıcı Bilgileri";
+            this.tabPage3.Text = "Sepet";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
@@ -86,7 +86,7 @@ namespace SiparisOtomasyon
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(835, 565);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Sepet";
+            this.tabPage4.Text = "Kullanıcı Bilgileri";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // User

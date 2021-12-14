@@ -29,7 +29,7 @@ namespace SiparisOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_Sil = new System.Windows.Forms.Button();
@@ -55,6 +55,7 @@ namespace SiparisOtomasyon
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tab4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +65,7 @@ namespace SiparisOtomasyon
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tab4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -223,7 +225,7 @@ namespace SiparisOtomasyon
             this.columnHeader7});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(27, 206);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(807, 244);
@@ -281,6 +283,16 @@ namespace SiparisOtomasyon
             this.tabPage3.Text = "Yönetici Bilgileri";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // tab4
+            // 
+            this.tab4.Location = new System.Drawing.Point(4, 24);
+            this.tab4.Name = "tab4";
+            this.tab4.Padding = new System.Windows.Forms.Padding(3);
+            this.tab4.Size = new System.Drawing.Size(862, 505);
+            this.tab4.TabIndex = 3;
+            this.tab4.Text = "Kullanıcılar";
+            this.tab4.UseVisualStyleBackColor = true;
+            // 
             // Executive
             // 
             this.ClientSize = new System.Drawing.Size(888, 560);
@@ -321,5 +333,6 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.Button btn_Sil;
         private System.Windows.Forms.Button btn_Düzenle;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tab4;
     }
 }
