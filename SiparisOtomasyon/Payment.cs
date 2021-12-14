@@ -16,7 +16,7 @@ namespace SiparisOtomasyon
         {
             InitializeComponent();
         }
-
+        public Users User;
         private void checkBox_KrediKarti_CheckedChanged(object sender, EventArgs e)
         {
 

@@ -58,6 +58,7 @@ namespace SiparisOtomasyon
             this.checkBox_Cek = new System.Windows.Forms.CheckBox();
             this.checkBox_KrediKarti = new System.Windows.Forms.CheckBox();
             this.button_Ödeme = new System.Windows.Forms.Button();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox_Nakit.SuspendLayout();
             this.groupBox_Cek.SuspendLayout();
@@ -332,11 +333,21 @@ namespace SiparisOtomasyon
             this.button_Ödeme.UseVisualStyleBackColor = true;
             this.button_Ödeme.Click += new System.EventHandler(this.button_Ödeme_Click);
             // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Location = new System.Drawing.Point(203, 445);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(46, 15);
+            this.lbTotal.TabIndex = 10;
+            this.lbTotal.Text = "Toplam";
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 487);
+            this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.button_Ödeme);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listView1);
@@ -393,5 +404,6 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button_Ödeme;
+        private System.Windows.Forms.Label lbTotal;
     }
 }
