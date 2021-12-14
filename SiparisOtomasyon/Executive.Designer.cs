@@ -307,7 +307,7 @@ namespace SiparisOtomasyon
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(862, 505);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Yönetici Bilgileri";
+            this.tabPage3.Text = "Kayıtlı Kişiler";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // listView2
