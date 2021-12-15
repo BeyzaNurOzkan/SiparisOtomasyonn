@@ -9,7 +9,7 @@ namespace SiparisOtomasyon
 {
     public class Users
     {
-        SqlConnection connection = new SqlConnection("Data Source=USERPC\MSSQLSERVER01;Initial Catalog=Siparis;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=USERPC\\MSSQLSERVER01;Initial Catalog=Siparis;Integrated Security=True");
         public int UserID { get; private set; }
         public string Name { get; private set; }
         public string[,] UserAddress = new string[5, 3];

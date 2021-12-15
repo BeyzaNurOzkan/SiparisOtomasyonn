@@ -29,35 +29,26 @@ namespace SiparisOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnResimSil = new System.Windows.Forms.Button();
+            this.btnResimEkle = new System.Windows.Forms.Button();
+            this.txtAciklama = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.cbxVergi = new System.Windows.Forms.ComboBox();
-            this.btn_Sil = new System.Windows.Forms.Button();
-            this.btn_Düzenle = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.txtÜrünAğirliği = new System.Windows.Forms.TextBox();
             this.txtÜrünFiyat = new System.Windows.Forms.TextBox();
-            this.txtÜrünStok = new System.Windows.Forms.TextBox();
-            this.txtÜrünKod = new System.Windows.Forms.TextBox();
             this.txtÜrünAdi = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.ProductTable = new System.Windows.Forms.ListView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.listView2 = new System.Windows.Forms.ListView();
             this.AdiSoyadi = new System.Windows.Forms.ColumnHeader();
@@ -75,9 +66,10 @@ namespace SiparisOtomasyon
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtAciklama = new System.Windows.Forms.RichTextBox();
+            this.btnGüncelle = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,43 +81,66 @@ namespace SiparisOtomasyon
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(870, 533);
+            this.tabControl1.Size = new System.Drawing.Size(870, 363);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnResimSil);
+            this.tabPage1.Controls.Add(this.btnResimEkle);
             this.tabPage1.Controls.Add(this.txtAciklama);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.flowLayoutPanel1);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.cbxVergi);
-            this.tabPage1.Controls.Add(this.btn_Sil);
-            this.tabPage1.Controls.Add(this.btn_Düzenle);
             this.tabPage1.Controls.Add(this.btnKaydet);
             this.tabPage1.Controls.Add(this.txtÜrünAğirliği);
             this.tabPage1.Controls.Add(this.txtÜrünFiyat);
-            this.tabPage1.Controls.Add(this.txtÜrünStok);
-            this.tabPage1.Controls.Add(this.txtÜrünKod);
             this.tabPage1.Controls.Add(this.txtÜrünAdi);
-            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(862, 505);
+            this.tabPage1.Size = new System.Drawing.Size(862, 335);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Ürünler";
+            this.tabPage1.Text = "Ürün Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnResimSil
+            // 
+            this.btnResimSil.Location = new System.Drawing.Point(505, 295);
+            this.btnResimSil.Name = "btnResimSil";
+            this.btnResimSil.Size = new System.Drawing.Size(75, 23);
+            this.btnResimSil.TabIndex = 36;
+            this.btnResimSil.Text = "Resim Sil";
+            this.btnResimSil.UseVisualStyleBackColor = true;
+            this.btnResimSil.Click += new System.EventHandler(this.btnResimSil_Click_1);
+            // 
+            // btnResimEkle
+            // 
+            this.btnResimEkle.Location = new System.Drawing.Point(586, 295);
+            this.btnResimEkle.Name = "btnResimEkle";
+            this.btnResimEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnResimEkle.TabIndex = 35;
+            this.btnResimEkle.Text = "Resim Ekle";
+            this.btnResimEkle.UseVisualStyleBackColor = true;
+            this.btnResimEkle.Click += new System.EventHandler(this.btnResimEkle_Click_1);
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.Location = new System.Drawing.Point(505, 55);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(328, 83);
+            this.txtAciklama.TabIndex = 33;
+            this.txtAciklama.Text = "";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(470, 206);
+            this.label13.Location = new System.Drawing.Point(441, 58);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(56, 15);
             this.label13.TabIndex = 31;
@@ -133,15 +148,15 @@ namespace SiparisOtomasyon
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 206);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(667, 144);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(346, 148);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(166, 174);
             this.flowLayoutPanel1.TabIndex = 30;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(470, 155);
+            this.label12.Location = new System.Drawing.Point(27, 198);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(36, 15);
             this.label12.TabIndex = 29;
@@ -150,32 +165,18 @@ namespace SiparisOtomasyon
             // cbxVergi
             // 
             this.cbxVergi.FormattingEnabled = true;
-            this.cbxVergi.Location = new System.Drawing.Point(580, 147);
+            this.cbxVergi.Items.AddRange(new object[] {
+            "0,03",
+            "0,10",
+            "0,20"});
+            this.cbxVergi.Location = new System.Drawing.Point(125, 190);
             this.cbxVergi.Name = "cbxVergi";
-            this.cbxVergi.Size = new System.Drawing.Size(253, 23);
+            this.cbxVergi.Size = new System.Drawing.Size(248, 23);
             this.cbxVergi.TabIndex = 28;
-            // 
-            // btn_Sil
-            // 
-            this.btn_Sil.Location = new System.Drawing.Point(665, 476);
-            this.btn_Sil.Name = "btn_Sil";
-            this.btn_Sil.Size = new System.Drawing.Size(75, 23);
-            this.btn_Sil.TabIndex = 27;
-            this.btn_Sil.Text = "Sil";
-            this.btn_Sil.UseVisualStyleBackColor = true;
-            // 
-            // btn_Düzenle
-            // 
-            this.btn_Düzenle.Location = new System.Drawing.Point(758, 476);
-            this.btn_Düzenle.Name = "btn_Düzenle";
-            this.btn_Düzenle.Size = new System.Drawing.Size(75, 23);
-            this.btn_Düzenle.TabIndex = 26;
-            this.btn_Düzenle.Text = "Düzenle";
-            this.btn_Düzenle.UseVisualStyleBackColor = true;
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(758, 331);
+            this.btnKaydet.Location = new System.Drawing.Point(27, 295);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(75, 23);
             this.btnKaydet.TabIndex = 25;
@@ -185,31 +186,17 @@ namespace SiparisOtomasyon
             // 
             // txtÜrünAğirliği
             // 
-            this.txtÜrünAğirliği.Location = new System.Drawing.Point(580, 103);
+            this.txtÜrünAğirliği.Location = new System.Drawing.Point(125, 144);
             this.txtÜrünAğirliği.Name = "txtÜrünAğirliği";
-            this.txtÜrünAğirliği.Size = new System.Drawing.Size(253, 23);
+            this.txtÜrünAğirliği.Size = new System.Drawing.Size(248, 23);
             this.txtÜrünAğirliği.TabIndex = 24;
             // 
             // txtÜrünFiyat
             // 
-            this.txtÜrünFiyat.Location = new System.Drawing.Point(581, 55);
+            this.txtÜrünFiyat.Location = new System.Drawing.Point(125, 100);
             this.txtÜrünFiyat.Name = "txtÜrünFiyat";
-            this.txtÜrünFiyat.Size = new System.Drawing.Size(253, 23);
+            this.txtÜrünFiyat.Size = new System.Drawing.Size(248, 23);
             this.txtÜrünFiyat.TabIndex = 23;
-            // 
-            // txtÜrünStok
-            // 
-            this.txtÜrünStok.Location = new System.Drawing.Point(125, 147);
-            this.txtÜrünStok.Name = "txtÜrünStok";
-            this.txtÜrünStok.Size = new System.Drawing.Size(248, 23);
-            this.txtÜrünStok.TabIndex = 22;
-            // 
-            // txtÜrünKod
-            // 
-            this.txtÜrünKod.Location = new System.Drawing.Point(125, 103);
-            this.txtÜrünKod.Name = "txtÜrünKod";
-            this.txtÜrünKod.Size = new System.Drawing.Size(248, 23);
-            this.txtÜrünKod.TabIndex = 21;
             // 
             // txtÜrünAdi
             // 
@@ -218,37 +205,19 @@ namespace SiparisOtomasyon
             this.txtÜrünAdi.Size = new System.Drawing.Size(248, 23);
             this.txtÜrünAdi.TabIndex = 20;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 150);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 15);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Ürün Stok:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(470, 103);
+            this.label5.Location = new System.Drawing.Point(27, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 15);
             this.label5.TabIndex = 18;
             this.label5.Text = "Ürün Ağırlığı:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 15);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Ürün Kodu:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(470, 58);
+            this.label3.Location = new System.Drawing.Point(27, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 16;
@@ -273,64 +242,37 @@ namespace SiparisOtomasyon
             this.label1.TabIndex = 14;
             this.label1.Text = "Ürün Ekle";
             // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader7});
-            this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(27, 360);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(807, 110);
-            this.listView1.TabIndex = 13;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Ürün Adı";
-            this.columnHeader1.Width = 200;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Ürün Kodu";
-            this.columnHeader2.Width = 100;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Ürün Fiyatı";
-            this.columnHeader3.Width = 100;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Ürün Ağırlığı";
-            this.columnHeader4.Width = 100;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Ürün Stok";
-            this.columnHeader5.Width = 100;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Düzenleme";
-            this.columnHeader7.Width = 200;
-            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnGüncelle);
+            this.tabPage2.Controls.Add(this.btnSil);
+            this.tabPage2.Controls.Add(this.ProductTable);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(862, 505);
+            this.tabPage2.Size = new System.Drawing.Size(862, 335);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Siparişler";
+            this.tabPage2.Text = "Ürünler";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(777, 306);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.TabIndex = 1;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // ProductTable
+            // 
+            this.ProductTable.HideSelection = false;
+            this.ProductTable.Location = new System.Drawing.Point(3, 7);
+            this.ProductTable.Name = "ProductTable";
+            this.ProductTable.Size = new System.Drawing.Size(849, 281);
+            this.ProductTable.TabIndex = 0;
+            this.ProductTable.UseCompatibleStateImageBehavior = false;
             // 
             // tabPage3
             // 
@@ -349,7 +291,7 @@ namespace SiparisOtomasyon
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(862, 505);
+            this.tabPage3.Size = new System.Drawing.Size(862, 335);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Kayıtlı Kişiler";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -481,23 +423,27 @@ namespace SiparisOtomasyon
             this.label7.TabIndex = 0;
             this.label7.Text = "Kullanıcı Adı:";
             // 
-            // txtAciklama
+            // btnGüncelle
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(581, 203);
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(252, 99);
-            this.txtAciklama.TabIndex = 33;
-            this.txtAciklama.Text = "";
+            this.btnGüncelle.Location = new System.Drawing.Point(696, 306);
+            this.btnGüncelle.Name = "btnGüncelle";
+            this.btnGüncelle.Size = new System.Drawing.Size(75, 23);
+            this.btnGüncelle.TabIndex = 2;
+            this.btnGüncelle.Text = "Güncelle";
+            this.btnGüncelle.UseVisualStyleBackColor = true;
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // Executive
             // 
-            this.ClientSize = new System.Drawing.Size(888, 560);
+            this.ClientSize = new System.Drawing.Size(888, 386);
             this.Controls.Add(this.tabControl1);
             this.Name = "Executive";
             this.Text = "Yönetici ";
+            this.Load += new System.EventHandler(this.Executive_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
@@ -512,24 +458,15 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.TextBox txtÜrünAğirliği;
         private System.Windows.Forms.TextBox txtÜrünFiyat;
-        private System.Windows.Forms.TextBox txtÜrünStok;
-        private System.Windows.Forms.TextBox txtÜrünKod;
         private System.Windows.Forms.TextBox txtÜrünAdi;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader Ürünadi;
         private System.Windows.Forms.ColumnHeader Ürünkod;
         private System.Windows.Forms.ColumnHeader Ürünfiyat;
         private System.Windows.Forms.ColumnHeader Ürünağirlik;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.Button btn_Sil;
-        private System.Windows.Forms.Button btn_Düzenle;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox textBox9;
@@ -547,14 +484,15 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.ColumnHeader Sifre;
         private System.Windows.Forms.ColumnHeader KullaniciAdi;
         private System.Windows.Forms.ColumnHeader Durumu;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbxVergi;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RichTextBox txtAciklama;
+        private System.Windows.Forms.Button btnResimSil;
+        private System.Windows.Forms.Button btnResimEkle;
+        private System.Windows.Forms.ListView ProductTable;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGüncelle;
     }
 }
