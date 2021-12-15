@@ -47,6 +47,7 @@ namespace SiparisOtomasyon
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnGüncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.ProductTable = new System.Windows.Forms.ListView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -66,7 +67,7 @@ namespace SiparisOtomasyon
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnGüncelle = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -78,6 +79,7 @@ namespace SiparisOtomasyon
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -255,6 +257,16 @@ namespace SiparisOtomasyon
             this.tabPage2.Text = "Ürünler";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnGüncelle
+            // 
+            this.btnGüncelle.Location = new System.Drawing.Point(696, 306);
+            this.btnGüncelle.Name = "btnGüncelle";
+            this.btnGüncelle.Size = new System.Drawing.Size(75, 23);
+            this.btnGüncelle.TabIndex = 2;
+            this.btnGüncelle.Text = "Güncelle";
+            this.btnGüncelle.UseVisualStyleBackColor = true;
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
+            // 
             // btnSil
             // 
             this.btnSil.Location = new System.Drawing.Point(777, 306);
@@ -423,15 +435,15 @@ namespace SiparisOtomasyon
             this.label7.TabIndex = 0;
             this.label7.Text = "Kullanıcı Adı:";
             // 
-            // btnGüncelle
+            // tabPage4
             // 
-            this.btnGüncelle.Location = new System.Drawing.Point(696, 306);
-            this.btnGüncelle.Name = "btnGüncelle";
-            this.btnGüncelle.Size = new System.Drawing.Size(75, 23);
-            this.btnGüncelle.TabIndex = 2;
-            this.btnGüncelle.Text = "Güncelle";
-            this.btnGüncelle.UseVisualStyleBackColor = true;
-            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(862, 335);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Gelen Siparişler";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // Executive
             // 
@@ -494,5 +506,6 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.ListView ProductTable;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGüncelle;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
