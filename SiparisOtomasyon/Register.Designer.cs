@@ -40,11 +40,13 @@ namespace SiparisOtomasyon
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtAdresBaslik = new System.Windows.Forms.TextBox();
             this.txtAdres = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbxGörevi = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnKayitol
             // 
-            this.btnKayitol.Location = new System.Drawing.Point(248, 329);
+            this.btnKayitol.Location = new System.Drawing.Point(248, 397);
             this.btnKayitol.Name = "btnKayitol";
             this.btnKayitol.Size = new System.Drawing.Size(75, 23);
             this.btnKayitol.TabIndex = 0;
@@ -133,11 +135,33 @@ namespace SiparisOtomasyon
             this.txtAdres.TabIndex = 11;
             this.txtAdres.Text = "";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 342);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 15);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Görevi";
+            // 
+            // cbxGörevi
+            // 
+            this.cbxGörevi.FormattingEnabled = true;
+            this.cbxGörevi.Items.AddRange(new object[] {
+            "Yönetici",
+            "Kullanıcı"});
+            this.cbxGörevi.Location = new System.Drawing.Point(125, 334);
+            this.cbxGörevi.Name = "cbxGörevi";
+            this.cbxGörevi.Size = new System.Drawing.Size(198, 23);
+            this.cbxGörevi.TabIndex = 13;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 372);
+            this.ClientSize = new System.Drawing.Size(349, 432);
+            this.Controls.Add(this.cbxGörevi);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAdres);
             this.Controls.Add(this.txtAdresBaslik);
             this.Controls.Add(this.txtSifre);
@@ -169,5 +193,7 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.TextBox txtAdresBaslik;
         private System.Windows.Forms.RichTextBox txtAdres;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbxGörevi;
     }
 }

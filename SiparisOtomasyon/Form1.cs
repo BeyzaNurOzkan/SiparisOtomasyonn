@@ -19,6 +19,8 @@ namespace SiparisOtomasyon
         }
         public Users User = new Users();
 
+        public int State { get; private set; }
+
         private void btnGiris_Click(object sender, EventArgs e)
         {
 
@@ -44,6 +46,11 @@ namespace SiparisOtomasyon
         {
             Register Register = new Register();
             Register.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

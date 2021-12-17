@@ -69,17 +69,20 @@ namespace SiparisOtomasyon
             }
         }
 
-        public void UserAdd(string Name, string UserName, string Password, string AddressTitle, string Address)
+        public void UserAdd(string Name, string UserName, string Password, string AddressTitle, string Address, bool State)
         {
             this.Name = Name;
             this.UserName = UserName;
             this.Password = Password;
             this.UserAddress[0, 0] = AddressTitle;
             this.UserAddress[0, 1] = Address;
-            SqlCommand cmd = new SqlCommand("insert into Users(Name,UserName,Password) values (@Name,@UserName,@Password)", connection);
+            this.State = State;
+
+            SqlCommand cmd = new SqlCommand("insert into Users(Name,UserName,Password,State) values (@Name,@UserName,@Password,@State)", connection);
             cmd.Parameters.AddWithValue("@Name", this.Name);
             cmd.Parameters.AddWithValue("@UserName", this.UserName);
             cmd.Parameters.AddWithValue("@Password", this.Password);
+            cmd.Parameters.AddWithValue("@State", this.State);
             connection.Open();
             cmd.ExecuteNonQuery();
             connection.Close();

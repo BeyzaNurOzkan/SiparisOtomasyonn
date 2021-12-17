@@ -71,7 +71,7 @@ namespace SiparisOtomasyon
             // 
             // btnGiris
             // 
-            this.btnGiris.Location = new System.Drawing.Point(204, 124);
+            this.btnGiris.Location = new System.Drawing.Point(204, 132);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(75, 23);
             this.btnGiris.TabIndex = 4;
@@ -81,7 +81,7 @@ namespace SiparisOtomasyon
             // 
             // btnKayit
             // 
-            this.btnKayit.Location = new System.Drawing.Point(114, 124);
+            this.btnKayit.Location = new System.Drawing.Point(114, 132);
             this.btnKayit.Name = "btnKayit";
             this.btnKayit.Size = new System.Drawing.Size(75, 23);
             this.btnKayit.TabIndex = 5;
@@ -93,7 +93,7 @@ namespace SiparisOtomasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 171);
+            this.ClientSize = new System.Drawing.Size(300, 184);
             this.Controls.Add(this.btnKayit);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtSifre);
@@ -102,6 +102,7 @@ namespace SiparisOtomasyon
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Giriş";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

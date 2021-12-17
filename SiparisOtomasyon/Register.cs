@@ -17,23 +17,34 @@ namespace SiparisOtomasyon
             InitializeComponent();
         }
 
+        public int State { get; private set; }
+
         private void btnKayitol_Click(object sender, EventArgs e)
         {
             Users User = new Users();
             if (txtKullaniciAdi.Text.Length >= 8)
             {
-
                 if (txtAdiSoyadi.Text != "")
                 {
-                    if (txtSifre.Text.Length >= 8)
+                    if (cbxGörevi.Text!="")
                     {
-                        User.UserAdd(txtAdiSoyadi.Text, txtKullaniciAdi.Text, txtSifre.Text, txtAdresBaslik.Text, txtAdres.Text);
-                        MessageBox.Show("Hoş Geldiniz " + User.Name, "HOŞ GELDİNİZ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
+                        if (txtSifre.Text.Length >= 8)
+                        {
+                            bool Gorev = true;
+                            if (cbxGörevi.Text == "Yönetici")
+                                Gorev = false;
+                            User.UserAdd(txtAdiSoyadi.Text, txtKullaniciAdi.Text, txtSifre.Text, txtAdresBaslik.Text, txtAdres.Text,Gorev);
+                            MessageBox.Show("Hoş Geldiniz " + User.Name, "HOŞ GELDİNİZ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Şifre en az 8 karakterden oluşmalıdır.", "YANLIŞ GİRİŞ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Şifre en az 8 karakterden oluşmalıdır.", "YANLIŞ GİRİŞ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Görevi seçiniz.", "YANLIŞ GİRİŞ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
