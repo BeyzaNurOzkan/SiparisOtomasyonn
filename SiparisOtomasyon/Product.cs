@@ -10,7 +10,7 @@ namespace SiparisOtomasyon
     public class Product
     {
 
-        SqlConnection connection = new SqlConnection("Data Source=USERPC\\MSSQLSERVER01;Initial Catalog=Siparis;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-K72V513;Initial Catalog=Siparis;Integrated Security=True");
         public int ID { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
@@ -34,7 +34,7 @@ namespace SiparisOtomasyon
             SqlDataReader sdr = cmd.ExecuteReader();
             while (sdr.Read())
             {
-                Products.Add(new Product { ID = (int)sdr["ID"], Name = (string)sdr["Name"], Price = (double)sdr["Price"], Description = (string)sdr["Description"], Weight = (double)sdr["Weight"], Tax = (double)sdr["Tax"] });
+                Products.Add(new Product { ID = Convert.ToInt32( sdr["ID"]), Name = Convert.ToString( sdr["Name"]), Price = Convert.ToDouble( sdr["Price"]), Description = Convert.ToString(sdr["Description"]), Weight = Convert.ToDouble(sdr["Weight"]), Tax = Convert.ToDouble(sdr["Tax"] )});
             }
             connection.Close();
         }
