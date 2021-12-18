@@ -34,19 +34,17 @@ namespace SiparisOtomasyon
                         {
                             if (flowLayoutPanel1.Controls.Count > 0)
                             {
-
-
                                 double Tax;
                                 Product.Name = txtÜrünAdi.Text;
                                 Product.Description = txtAciklama.Text;
                                 Product.Price = Convert.ToDouble(txtÜrünFiyat.Text);
                                 Product.Weight = Convert.ToDouble(txtÜrünAğirliği.Text);
                                 if (cbxVergi.SelectedIndex == 0)
-                                    Tax = 0.03;
+                                    Tax = 0.01;
                                 else if (cbxVergi.SelectedIndex == 1)
-                                    Tax = 0.10;
+                                    Tax = 0.08;
                                 else
-                                    Tax = 0.20;
+                                    Tax = 0.18;
                                 Product.Tax = Tax;
                                 string target = Application.StartupPath + @"\Images\";
                                 int ProductID = Product.maxProductID() + 1;
@@ -105,8 +103,6 @@ namespace SiparisOtomasyon
                     pbPicture.ImageLocation = PictureFileLocation[PictureCount];
                     flowLayoutPanel1.Controls.Add(pbPicture);
                     PictureCount++;
-
-
                 }
             }
             else

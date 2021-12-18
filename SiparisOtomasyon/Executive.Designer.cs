@@ -144,9 +144,9 @@ namespace SiparisOtomasyon
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(441, 58);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 15);
+            this.label13.Size = new System.Drawing.Size(62, 15);
             this.label13.TabIndex = 31;
-            this.label13.Text = "Açıklama";
+            this.label13.Text = "Açıklama1";
             // 
             // flowLayoutPanel1
             // 
@@ -168,9 +168,9 @@ namespace SiparisOtomasyon
             // 
             this.cbxVergi.FormattingEnabled = true;
             this.cbxVergi.Items.AddRange(new object[] {
-            "0,03",
-            "0,10",
-            "0,20"});
+            "%1",
+            "%8",
+            "%18"});
             this.cbxVergi.Location = new System.Drawing.Point(125, 190);
             this.cbxVergi.Name = "cbxVergi";
             this.cbxVergi.Size = new System.Drawing.Size(248, 23);
