@@ -42,6 +42,7 @@ namespace SiparisOtomasyon
         public int maxProductID()
         {
             SqlCommand cmd = new SqlCommand("select MAX(ID) from Product", connection);
+            //yok ihtimali
             connection.Open();
             int maxProductID = (int)cmd.ExecuteScalar();
             connection.Close();
