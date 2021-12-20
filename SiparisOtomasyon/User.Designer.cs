@@ -39,7 +39,6 @@ namespace SiparisOtomasyon
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_UrunGoruntule = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_adet = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,12 +46,9 @@ namespace SiparisOtomasyon
             this.lw_urun = new System.Windows.Forms.ListView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lw_sepet = new System.Windows.Forms.ListView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -82,7 +78,6 @@ namespace SiparisOtomasyon
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.btn_UrunGoruntule);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.txt_adet);
             this.tabPage1.Controls.Add(this.label1);
@@ -167,17 +162,6 @@ namespace SiparisOtomasyon
             this.label3.TabIndex = 6;
             this.label3.Text = "Ürün Fiyatı";
             // 
-            // btn_UrunGoruntule
-            // 
-            this.btn_UrunGoruntule.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_UrunGoruntule.Location = new System.Drawing.Point(6, 486);
-            this.btn_UrunGoruntule.Name = "btn_UrunGoruntule";
-            this.btn_UrunGoruntule.Size = new System.Drawing.Size(454, 48);
-            this.btn_UrunGoruntule.TabIndex = 5;
-            this.btn_UrunGoruntule.Text = "Ürünleri Görüntüle";
-            this.btn_UrunGoruntule.UseVisualStyleBackColor = true;
-            this.btn_UrunGoruntule.Click += new System.EventHandler(this.btn_UrunGoruntule_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -213,7 +197,6 @@ namespace SiparisOtomasyon
             this.button1.TabIndex = 1;
             this.button1.Text = "Sepete Ekle";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lw_urun
             // 
@@ -240,9 +223,6 @@ namespace SiparisOtomasyon
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.lw_sepet);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
@@ -253,26 +233,6 @@ namespace SiparisOtomasyon
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Sepet";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(485, 103);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(434, 42);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Sepet Temizle";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(3, 501);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(434, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Sepet Görüntüle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
             // 
@@ -304,16 +264,6 @@ namespace SiparisOtomasyon
             this.tabPage4.Text = "Kullanıcı Bilgileri";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(485, 222);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(434, 42);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Sipariş Ver";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -343,7 +293,6 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView lw_urun;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_UrunGoruntule;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_adet;
         private System.Windows.Forms.TextBox txt_fyt;
@@ -356,8 +305,5 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListView lw_sepet;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
     }
 }
