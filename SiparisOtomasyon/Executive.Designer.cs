@@ -51,18 +51,12 @@ namespace SiparisOtomasyon
             this.btnSil = new System.Windows.Forms.Button();
             this.ProductTable = new System.Windows.Forms.ListView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.AdiSoyadi = new System.Windows.Forms.ColumnHeader();
-            this.Sifre = new System.Windows.Forms.ColumnHeader();
-            this.KullaniciAdi = new System.Windows.Forms.ColumnHeader();
-            this.Durumu = new System.Windows.Forms.ColumnHeader();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.UserTable = new System.Windows.Forms.ListView();
+            this.txtDurum = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.txtAdiSoyad = new System.Windows.Forms.TextBox();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -103,10 +97,10 @@ namespace SiparisOtomasyon
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(862, 343);
+            this.tabPage1.Size = new System.Drawing.Size(862, 348);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ürün Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -144,7 +138,7 @@ namespace SiparisOtomasyon
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(421, 58);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 20);
+            this.label13.Size = new System.Drawing.Size(62, 15);
             this.label13.TabIndex = 31;
             this.label13.Text = "Açıklama1";
             // 
@@ -160,7 +154,7 @@ namespace SiparisOtomasyon
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(27, 198);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 20);
+            this.label12.Size = new System.Drawing.Size(36, 15);
             this.label12.TabIndex = 29;
             this.label12.Text = "Vergi:";
             // 
@@ -173,7 +167,7 @@ namespace SiparisOtomasyon
             "%18"});
             this.cbxVergi.Location = new System.Drawing.Point(125, 190);
             this.cbxVergi.Name = "cbxVergi";
-            this.cbxVergi.Size = new System.Drawing.Size(248, 28);
+            this.cbxVergi.Size = new System.Drawing.Size(248, 23);
             this.cbxVergi.TabIndex = 28;
             // 
             // btnKaydet
@@ -190,21 +184,21 @@ namespace SiparisOtomasyon
             // 
             this.txtÜrünAğirliği.Location = new System.Drawing.Point(125, 144);
             this.txtÜrünAğirliği.Name = "txtÜrünAğirliği";
-            this.txtÜrünAğirliği.Size = new System.Drawing.Size(248, 27);
+            this.txtÜrünAğirliği.Size = new System.Drawing.Size(248, 23);
             this.txtÜrünAğirliği.TabIndex = 24;
             // 
             // txtÜrünFiyat
             // 
             this.txtÜrünFiyat.Location = new System.Drawing.Point(125, 100);
             this.txtÜrünFiyat.Name = "txtÜrünFiyat";
-            this.txtÜrünFiyat.Size = new System.Drawing.Size(248, 27);
+            this.txtÜrünFiyat.Size = new System.Drawing.Size(248, 23);
             this.txtÜrünFiyat.TabIndex = 23;
             // 
             // txtÜrünAdi
             // 
             this.txtÜrünAdi.Location = new System.Drawing.Point(125, 55);
             this.txtÜrünAdi.Name = "txtÜrünAdi";
-            this.txtÜrünAdi.Size = new System.Drawing.Size(248, 27);
+            this.txtÜrünAdi.Size = new System.Drawing.Size(248, 23);
             this.txtÜrünAdi.TabIndex = 20;
             // 
             // label5
@@ -212,7 +206,7 @@ namespace SiparisOtomasyon
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(27, 147);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 20);
+            this.label5.Size = new System.Drawing.Size(77, 15);
             this.label5.TabIndex = 18;
             this.label5.Text = "Ürün Ağırlığı:";
             // 
@@ -221,7 +215,7 @@ namespace SiparisOtomasyon
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(27, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 20);
+            this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 16;
             this.label3.Text = "Ürün Fiyatı:";
             // 
@@ -230,7 +224,7 @@ namespace SiparisOtomasyon
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 15;
             this.label2.Text = "Ürün Adı";
             // 
@@ -240,7 +234,7 @@ namespace SiparisOtomasyon
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(27, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 28);
+            this.label1.Size = new System.Drawing.Size(77, 21);
             this.label1.TabIndex = 14;
             this.label1.Text = "Ürün Ekle";
             // 
@@ -249,10 +243,10 @@ namespace SiparisOtomasyon
             this.tabPage2.Controls.Add(this.btnGüncelle);
             this.tabPage2.Controls.Add(this.btnSil);
             this.tabPage2.Controls.Add(this.ProductTable);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(862, 343);
+            this.tabPage2.Size = new System.Drawing.Size(862, 348);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ürünler";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -288,141 +282,97 @@ namespace SiparisOtomasyon
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.listView2);
-            this.tabPage3.Controls.Add(this.richTextBox1);
-            this.tabPage3.Controls.Add(this.textBox9);
-            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Controls.Add(this.UserTable);
+            this.tabPage3.Controls.Add(this.txtDurum);
             this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.textBox8);
-            this.tabPage3.Controls.Add(this.textBox7);
-            this.tabPage3.Controls.Add(this.textBox6);
+            this.tabPage3.Controls.Add(this.txtSifre);
+            this.tabPage3.Controls.Add(this.txtAdiSoyad);
+            this.tabPage3.Controls.Add(this.txtKullaniciAdi);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(862, 343);
+            this.tabPage3.Size = new System.Drawing.Size(862, 348);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Kayıtlı Kişiler";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // listView2
+            // UserTable
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.AdiSoyadi,
-            this.Sifre,
-            this.KullaniciAdi,
-            this.Durumu});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(6, 178);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(850, 214);
-            this.listView2.TabIndex = 11;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.UserTable.HideSelection = false;
+            this.UserTable.Location = new System.Drawing.Point(6, 178);
+            this.UserTable.Name = "UserTable";
+            this.UserTable.Size = new System.Drawing.Size(850, 214);
+            this.UserTable.TabIndex = 11;
+            this.UserTable.UseCompatibleStateImageBehavior = false;
+            this.UserTable.View = System.Windows.Forms.View.Details;
+            this.UserTable.SelectedIndexChanged += new System.EventHandler(this.UserTable_SelectedIndexChanged);
             // 
-            // AdiSoyadi
+            // txtDurum
             // 
-            this.AdiSoyadi.Text = "Adı Soyadı";
-            this.AdiSoyadi.Width = 200;
-            // 
-            // Sifre
-            // 
-            this.Sifre.DisplayIndex = 2;
-            this.Sifre.Text = "Şifre";
-            this.Sifre.Width = 200;
-            // 
-            // KullaniciAdi
-            // 
-            this.KullaniciAdi.DisplayIndex = 1;
-            this.KullaniciAdi.Text = "Kullanıcı Adı";
-            this.KullaniciAdi.Width = 200;
-            // 
-            // Durumu
-            // 
-            this.Durumu.Text = "Durumu";
-            this.Durumu.Width = 200;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(606, 85);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(235, 58);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(606, 34);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(235, 27);
-            this.textBox9.TabIndex = 9;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(487, 85);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 20);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Adres:";
+            this.txtDurum.Location = new System.Drawing.Point(606, 34);
+            this.txtDurum.Name = "txtDurum";
+            this.txtDurum.Size = new System.Drawing.Size(235, 23);
+            this.txtDurum.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(487, 42);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 20);
+            this.label10.Size = new System.Drawing.Size(54, 15);
             this.label10.TabIndex = 7;
-            this.label10.Text = "Adres Başlık:";
+            this.label10.Text = "Durumu:";
             // 
-            // textBox8
+            // txtSifre
             // 
-            this.textBox8.Location = new System.Drawing.Point(163, 120);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(237, 27);
-            this.textBox8.TabIndex = 6;
+            this.txtSifre.Location = new System.Drawing.Point(606, 77);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(235, 23);
+            this.txtSifre.TabIndex = 6;
             // 
-            // textBox7
+            // txtAdiSoyad
             // 
-            this.textBox7.Location = new System.Drawing.Point(163, 77);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(237, 27);
-            this.textBox7.TabIndex = 5;
+            this.txtAdiSoyad.Location = new System.Drawing.Point(163, 77);
+            this.txtAdiSoyad.Name = "txtAdiSoyad";
+            this.txtAdiSoyad.Size = new System.Drawing.Size(237, 23);
+            this.txtAdiSoyad.TabIndex = 5;
             // 
-            // textBox6
+            // txtKullaniciAdi
             // 
-            this.textBox6.Location = new System.Drawing.Point(163, 34);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(237, 27);
-            this.textBox6.TabIndex = 4;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(163, 34);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(237, 23);
+            this.txtKullaniciAdi.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(766, 149);
+            this.button2.Location = new System.Drawing.Point(766, 142);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 30);
             this.button2.TabIndex = 3;
             this.button2.Text = "Güncelle";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(25, 128);
+            this.label9.Location = new System.Drawing.Point(487, 85);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 20);
+            this.label9.Size = new System.Drawing.Size(33, 15);
             this.label9.TabIndex = 2;
-            this.label9.Text = "Şifre";
+            this.label9.Text = "Şifre:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(25, 85);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 20);
+            this.label8.Size = new System.Drawing.Size(66, 15);
             this.label8.TabIndex = 1;
             this.label8.Text = "Adı Soyadı:";
             // 
@@ -431,16 +381,16 @@ namespace SiparisOtomasyon
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(25, 42);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 20);
+            this.label7.Size = new System.Drawing.Size(76, 15);
             this.label7.TabIndex = 0;
             this.label7.Text = "Kullanıcı Adı:";
             // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(862, 343);
+            this.tabPage4.Size = new System.Drawing.Size(862, 348);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Gelen Siparişler";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -480,22 +430,16 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.ColumnHeader Ürünfiyat;
         private System.Windows.Forms.ColumnHeader Ürünağirlik;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtDurum;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.TextBox txtAdiSoyad;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader AdiSoyadi;
-        private System.Windows.Forms.ColumnHeader Sifre;
-        private System.Windows.Forms.ColumnHeader KullaniciAdi;
-        private System.Windows.Forms.ColumnHeader Durumu;
+        private System.Windows.Forms.ListView UserTable;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbxVergi;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

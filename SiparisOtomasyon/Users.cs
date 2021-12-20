@@ -9,13 +9,15 @@ namespace SiparisOtomasyon
 {
     public class Users
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-K72V513;Initial Catalog=Siparis;Integrated Security=True");
-        public int UserID { get; private set; }
-        public string Name { get; private set; }
+        SqlConnection connection = new SqlConnection("Data Source=USERPC\\MSSQLSERVER01;Initial Catalog=Siparis;Integrated Security=True");
+        //USERPC\\MSSQLSERVER01
+        //DESKTOP-K72V513
+        public int UserID { get; set; }
+        public string Name { get; set; }
         public string[,] UserAddress = new string[5, 3];
-        private string UserName { get; set; }
-        private string Password { get; set; }
-        public Boolean State { get; private set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public Boolean State { get; set; }
         public List<Users> User;
 
         public bool ConnectionQuery(string userName, string password)
@@ -111,48 +113,25 @@ namespace SiparisOtomasyon
         public void getUsers()
         {
 
-            SqlCommand cmd = new SqlCommand("select * from Users where UserState='0'", connection);
+            SqlCommand cmd = new SqlCommand("select * from Users", connection);
             connection.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
             while (sdr.Read())
             {
-                User.Add(new Users { UserID = (int)sdr["UserID"], UserName = (string)sdr["UserName"], Name = (string)sdr["Name"] });
+                User.Add(new Users { UserID = (int)sdr["UserID"], UserName = (string)sdr["UserName"], Name = (string)sdr["Name"], Password = (string)sdr["Password"] , State= Convert.ToBoolean( sdr["State"])});
             }
             connection.Close();
         }
-        public void getAddress(int userID)
+        public void UserUpdate()
         {
-            SqlCommand cmd = new SqlCommand("select * from UserAddress where UserID=@UserID", connection);
-            cmd.Parameters.AddWithValue("@UserID", userID);
-            connection.Open();
-            SqlDataReader sdr = cmd.ExecuteReader();
-
-            for (int j = 0; j < UserAddress.Length / 3; j++)
-            {
-                UserAddress[j, 0] = null;
-                UserAddress[j, 1] = null;
-                UserAddress[j, 2] = null;
-            }
-            int i = 0;
-            while (sdr.Read())
-            {
-                UserAddress[i, 0] = sdr["AddressID"].ToString();
-                UserAddress[i, 1] = (string)sdr["AddressTitle"];
-                UserAddress[i, 2] = (string)sdr["Address"];
-                i++;
-            }
-            connection.Close();
-        }
-        public void AddressRemove(int ListNumber)
-        {
-            int addressID = Convert.ToInt32(UserAddress[ListNumber, 0]);
-            for (int i = 0; i < 3; i++)
-                UserAddress[ListNumber, i] = null;
-            SqlCommand cmd = new SqlCommand("delete from UserAddress where AddressID=@AddressID", connection);
-            cmd.Parameters.AddWithValue("@AddressID", addressID);
+            SqlCommand cmd = new SqlCommand("update Users set Name=@Name,Password=@Password,UserName=@UserName,State=@State where UserID=@ID", connection);
+            cmd.Parameters.AddWithValue("@Name", this.Name);
+            cmd.Parameters.AddWithValue("@Password", this.Password);
+            cmd.Parameters.AddWithValue("@UserName", this.UserName);
+            cmd.Parameters.AddWithValue("@State", this.State);
+            cmd.Parameters.AddWithValue("@ID", this.UserID);
             connection.Open();
             cmd.ExecuteNonQuery();
-            connection.Close();
         }
     }
 }
