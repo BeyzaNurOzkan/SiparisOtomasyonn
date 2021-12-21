@@ -222,6 +222,7 @@ namespace SiparisOtomasyon
             this.lw_urun.Location = new System.Drawing.Point(0, 64);
             this.lw_urun.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lw_urun.Name = "lw_urun";
+            this.lw_urun.ShowItemToolTips = true;
             this.lw_urun.Size = new System.Drawing.Size(453, 448);
             this.lw_urun.TabIndex = 0;
             this.lw_urun.UseCompatibleStateImageBehavior = false;

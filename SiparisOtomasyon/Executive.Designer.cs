@@ -278,6 +278,7 @@ namespace SiparisOtomasyon
             this.ProductTable.HideSelection = false;
             this.ProductTable.Location = new System.Drawing.Point(3, 7);
             this.ProductTable.Name = "ProductTable";
+            this.ProductTable.ShowItemToolTips = true;
             this.ProductTable.Size = new System.Drawing.Size(849, 281);
             this.ProductTable.TabIndex = 0;
             this.ProductTable.UseCompatibleStateImageBehavior = false;
@@ -307,6 +308,7 @@ namespace SiparisOtomasyon
             this.UserTable.HideSelection = false;
             this.UserTable.Location = new System.Drawing.Point(6, 178);
             this.UserTable.Name = "UserTable";
+            this.UserTable.ShowItemToolTips = true;
             this.UserTable.Size = new System.Drawing.Size(850, 214);
             this.UserTable.TabIndex = 11;
             this.UserTable.UseCompatibleStateImageBehavior = false;
@@ -403,6 +405,7 @@ namespace SiparisOtomasyon
             this.listGelenSiparis.HideSelection = false;
             this.listGelenSiparis.Location = new System.Drawing.Point(6, 6);
             this.listGelenSiparis.Name = "listGelenSiparis";
+            this.listGelenSiparis.ShowItemToolTips = true;
             this.listGelenSiparis.Size = new System.Drawing.Size(850, 336);
             this.listGelenSiparis.TabIndex = 0;
             this.listGelenSiparis.UseCompatibleStateImageBehavior = false;
