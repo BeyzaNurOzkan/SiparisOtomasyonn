@@ -18,11 +18,13 @@ namespace SiparisOtomasyon
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-K72V513;Initial Catalog=Siparis;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=USERPC\\MSSQLSERVER01;Initial Catalog=Siparis;Integrated Security=True");
         //USERPC\\MSSQLSERVER01
         //DESKTOP-K72V513
         List<Product> Products;
         Product Product;
+        public Users Users;
+        public int loginId;
 
         public void urunlistele()
         {
@@ -73,7 +75,6 @@ namespace SiparisOtomasyon
             }
             connection.Close();
         }
-
        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string sql = "select *from Product where ID ='" +comboBox1.Text+"';";
@@ -105,11 +106,40 @@ namespace SiparisOtomasyon
             }
             
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void btnGüncelle_Click(object sender, EventArgs e)
         {
-            Payment gec = new Payment();
-            gec.Show();
+            if (txt_AdiSoyadi.Text != "")
+            {
+                if (txt_Sifre.Text != "")
+                {
+                    if (txt_KullaniciAdi.Text != "")
+                    {
+                        if (MessageBox.Show("Kullanıcı bilgilerini güncellemek istediğinize emin misiniz?", "GÜNCELLEME", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        {
+                            Users Users = new Users();
+                            Users.UserUpdate2(loginId, txt_AdiSoyadi.Text, txt_KullaniciAdi.Text, txt_Sifre.Text, txt_Adres.Text, txt_AdresBas.Text);
+                            MessageBox.Show("Kullanıcı başarıyla güncellendi.", "GÜNCELLENDİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lütfen kullanıcı adı giriniz.", "YANLIŞ GİRİŞ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Şifre boş bırakılamaz.", "YANLIŞ GİRİŞ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ad Soyad boş bırakılamaz.", "YANLIŞ GİRİŞ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnÖdeme_Click(object sender, EventArgs e)
+        {
+
         }
     }   
 }
