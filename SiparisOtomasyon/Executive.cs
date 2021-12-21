@@ -22,6 +22,8 @@ namespace SiparisOtomasyon
         Product Product;
         List<Users> User;
         Users Users;
+        List<Orders> Order;
+        Orders Orders;
         int PictureCount = 0;
         private void btnKaydet_Click(object sender, EventArgs e)
         {
@@ -194,10 +196,60 @@ namespace SiparisOtomasyon
                 UserTable.Items.Add(listviewLine);
             }
         }
+        public void listsGelenSiparis()
+        {
+            Orders = new Orders();
+            Orders.getOrderList();
+            Order = Orders.Order;
+            listGelenSiparis.View = View.Details;
+            listGelenSiparis.FullRowSelect = true;
+            listGelenSiparis.GridLines = true;
+            listGelenSiparis.Columns.Add("Sipariş No", 50);
+            listGelenSiparis.Columns.Add("Sipariş Tarihi", 100);
+            listGelenSiparis.Columns.Add("Sipariş Durumu", 100);
+            listGelenSiparis.Columns.Add("Miktar", 70);
+            listGelenSiparis.Columns.Add("Fiyatı", 70);
+            listGelenSiparis.Columns.Add("Adres Başlığı", 150);
+            listGelenSiparis.Columns.Add("Adres", 300);
+            string tempOrderState = "";
+            for (int i = 0; i < Order.Count; i++)
+            {
+                switch (Order[i].OrderState)
+                {
+                    case 0:
+                        tempOrderState = "Hazırlanıyor";
+                        break;
+                    default:
+                        break;
+                }
+                string[] row =
+                {
+                    Order[i].OrderID.ToString(),
+                    Order[i].CreateDate.ToString().Substring(0,10),
+                    tempOrderState,
+                    Order[i].Quantity.ToString()+" Adet",
+                    Order[i].Amount.ToString()+" TL",
+                    Order[i].AddressTitle,
+                    Order[i].Address
+                    //Order[i].Product.Name,
+                    //Order[i].calcTotal().ToString()+" ₺",
+                    //Order[i].OrderDetail.calcWeight().ToString()+" Kg",
+                
+            };
+                var listviewLine = new ListViewItem(row);
+                listGelenSiparis.Items.Add(listviewLine);
+            }
+        }
+        private void listGelenSiparis_DoubleClick(object sender, EventArgs e)
+        {
+            ListViewItem item = listGelenSiparis.SelectedItems[0];
+            MessageBox.Show("Sipariş Numarası = " + item.SubItems[0].Text + "\nSipariş Tarihi = " + item.SubItems[1].Text + "\nSipraiş Durumu = " + item.SubItems[2].Text + "\nSipariş Edilen Ürün = " + item.SubItems[3].Text + "\nMiktar = " + item.SubItems[4].Text + "\nFiyatı = " + item.SubItems[5].Text + "\nAğırlığı = " + item.SubItems[6].Text + "\nVergisi = " + item.SubItems[7].Text + "\nAdres Başlığı = " + item.SubItems[8].Text + "\nAdres = " + item.SubItems[9].Text);
+        }
         private void Executive_Load(object sender, EventArgs e)
         {
             lists();
             userlists();
+            listsGelenSiparis();
         }
 
         private void pbFormClose_Click(object sender, EventArgs e)
@@ -277,8 +329,8 @@ namespace SiparisOtomasyon
                             Users.UserName = txtKullaniciAdi.Text;
                             Users.Name = txtAdiSoyad.Text;
                             Users.Password = txtSifre.Text;
-                            Users.State =state;
-                            Users.UserID =Convert.ToInt32( this.UserTable.SelectedItems[0].Text);
+                            Users.State = state;
+                            Users.UserID = Convert.ToInt32(this.UserTable.SelectedItems[0].Text);
                             Users.UserUpdate();
                             MessageBox.Show("Kişi başarıyla güncellendi", "GÜNCELLENDİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Executive frmItemUpdate = (Executive)Application.OpenForms["Executive"];

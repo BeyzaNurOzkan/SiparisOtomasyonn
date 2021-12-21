@@ -18,7 +18,7 @@ namespace SiparisOtomasyon
             InitializeComponent();
         }
         public Users User = new Users();
-
+        public Orders Order = new Orders();
         public int State { get; private set; }
 
         private void btnGiris_Click(object sender, EventArgs e)

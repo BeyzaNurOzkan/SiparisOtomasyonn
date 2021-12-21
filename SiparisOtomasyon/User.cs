@@ -18,7 +18,7 @@ namespace SiparisOtomasyon
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-K72V513;Initial Catalog=Siparis;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=USERPC\\MSSQLSERVER01;Initial Catalog=Siparis;Integrated Security=True");
         //USERPC\\MSSQLSERVER01
         //DESKTOP-K72V513
         List<Product> Products;

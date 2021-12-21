@@ -10,7 +10,7 @@ namespace SiparisOtomasyon
     public class Product
     {
 
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-K72V513;Initial Catalog=Siparis;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=USERPC\\MSSQLSERVER01;Initial Catalog=Siparis;Integrated Security=True");
         //USERPC\\MSSQLSERVER01
         //DESKTOP-K72V513
         public int ID { get; set; }
@@ -36,7 +36,7 @@ namespace SiparisOtomasyon
             SqlDataReader sdr = cmd.ExecuteReader();
             while (sdr.Read())
             {
-                Products.Add(new Product { ID = Convert.ToInt32( sdr["ID"]), Name = Convert.ToString( sdr["Name"]), Price = Convert.ToDouble( sdr["Price"]), Description = Convert.ToString(sdr["Description"]), Weight = Convert.ToDouble(sdr["Weight"]), Tax = Convert.ToDouble(sdr["Tax"] )});
+                Products.Add(new Product { ID = Convert.ToInt32(sdr["ID"]), Name = Convert.ToString(sdr["Name"]), Price = Convert.ToDouble(sdr["Price"]), Description = Convert.ToString(sdr["Description"]), Weight = Convert.ToDouble(sdr["Weight"]), Tax = Convert.ToDouble(sdr["Tax"]) });
             }
             connection.Close();
         }
@@ -93,22 +93,5 @@ namespace SiparisOtomasyon
             cmd.ExecuteNonQuery();
             connection.Close();
         }
-        //public void getProductList(int userID)
-        //{
-        //    SqlCommand cmd = new SqlCommand("select * from OrderTable inner join Item on OrderTable.itemID=Item.ID where OrderTable.userID=@userID", connection);
-        //    cmd.Parameters.AddWithValue("@ProductID", ID);
-        //    connection.Open();
-        //    SqlDataReader sdr = cmd.ExecuteReader();
-        //    while (sdr.Read())
-        //    {
-        //        Product product = new Product();
-        //        product.ID = (int)sdr["ID"];
-        //        product.Name = (string)sdr["Name"];
-        //        product.Price = (double)sdr["Price"];
-        //        product.Tax = (double)sdr["Tax"];
-        //        product.Weight = (double)sdr["Weight"];
-        //        product.Description = (string)sdr["Description"];
-        //    }
-        //}
     }
 }

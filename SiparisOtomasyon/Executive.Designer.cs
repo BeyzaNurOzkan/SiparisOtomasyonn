@@ -62,10 +62,12 @@ namespace SiparisOtomasyon
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.listGelenSiparis = new System.Windows.Forms.ListView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -387,6 +389,7 @@ namespace SiparisOtomasyon
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.listGelenSiparis);
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -394,6 +397,15 @@ namespace SiparisOtomasyon
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Gelen Siparişler";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // listGelenSiparis
+            // 
+            this.listGelenSiparis.HideSelection = false;
+            this.listGelenSiparis.Location = new System.Drawing.Point(6, 6);
+            this.listGelenSiparis.Name = "listGelenSiparis";
+            this.listGelenSiparis.Size = new System.Drawing.Size(850, 336);
+            this.listGelenSiparis.TabIndex = 0;
+            this.listGelenSiparis.UseCompatibleStateImageBehavior = false;
             // 
             // Executive
             // 
@@ -408,6 +420,7 @@ namespace SiparisOtomasyon
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -451,5 +464,6 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGüncelle;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.ListView listGelenSiparis;
     }
 }
