@@ -16,6 +16,8 @@ namespace SiparisOtomasyon
         public string Name { get; set; }
         public string[,] UserAddress = new string[5, 3];
         public string UserName { get; set; }
+        public string AddressTitle { get;  set; }
+        public string Address { get;  set; }
         public string Password { get; set; }
         public Boolean State { get; set; }
         public List<Users> User;
@@ -130,6 +132,23 @@ namespace SiparisOtomasyon
             cmd.Parameters.AddWithValue("@UserName", this.UserName);
             cmd.Parameters.AddWithValue("@State", this.State);
             cmd.Parameters.AddWithValue("@ID", this.UserID);
+            connection.Open();
+            cmd.ExecuteNonQuery();
+        }
+        public void UserUpdate2(int UserID,string Name, string Password, string UserName, string AddressTitle, string Address)
+        {
+            this.Name = Name;
+            this.Password = Password;
+            this.UserID = UserID;
+            this.UserName = UserName;
+            
+            SqlCommand cmd = new SqlCommand("update Users set Name=@Name,Password=@Password,UserName=@UserName where UserID=@UserID update UserAddress set AddressTitle=@AddressTitle,Address=@Address where UserID=@UserID ", connection);
+            cmd.Parameters.AddWithValue("@Name", this.Name);
+            cmd.Parameters.AddWithValue("@Password", this.Password);
+            cmd.Parameters.AddWithValue("@UserName", this.UserName);
+            cmd.Parameters.AddWithValue("@UserID", this.UserID);
+            cmd.Parameters.AddWithValue("@Address", Address);
+            cmd.Parameters.AddWithValue("@AddressTitle",AddressTitle);
             connection.Open();
             cmd.ExecuteNonQuery();
         }

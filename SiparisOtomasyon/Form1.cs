@@ -17,7 +17,7 @@ namespace SiparisOtomasyon
         {
             InitializeComponent();
         }
-        public Users User = new Users();
+        public Users User = new Users();       
         public Orders Order = new Orders();
         public int State { get; private set; }
 
@@ -26,9 +26,11 @@ namespace SiparisOtomasyon
 
             if (User.ConnectionQuery(txtKullaniciAdi.Text, txtSifre.Text))
             {
+                int Id = User.UserID;
                 if (User.State==true)
                 {
                     User User = new User();
+                    User.loginId = Id;
                     User.Show();
                 }
                 else
