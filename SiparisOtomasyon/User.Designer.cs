@@ -49,6 +49,8 @@ namespace SiparisOtomasyon
             this.label7 = new System.Windows.Forms.Label();
             this.lw_sepet = new System.Windows.Forms.ListView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_isim = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -70,6 +72,8 @@ namespace SiparisOtomasyon
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.MediumPurple;
+            this.tabPage1.Controls.Add(this.txt_isim);
+            this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.txt_UrunAcik);
             this.tabPage1.Controls.Add(this.txt_UrunAg);
             this.tabPage1.Controls.Add(this.label6);
@@ -93,7 +97,7 @@ namespace SiparisOtomasyon
             // 
             // txt_UrunAcik
             // 
-            this.txt_UrunAcik.Location = new System.Drawing.Point(699, 333);
+            this.txt_UrunAcik.Location = new System.Drawing.Point(709, 433);
             this.txt_UrunAcik.Multiline = true;
             this.txt_UrunAcik.Name = "txt_UrunAcik";
             this.txt_UrunAcik.Size = new System.Drawing.Size(211, 95);
@@ -101,7 +105,7 @@ namespace SiparisOtomasyon
             // 
             // txt_UrunAg
             // 
-            this.txt_UrunAg.Location = new System.Drawing.Point(699, 262);
+            this.txt_UrunAg.Location = new System.Drawing.Point(699, 351);
             this.txt_UrunAg.Name = "txt_UrunAg";
             this.txt_UrunAg.Size = new System.Drawing.Size(125, 27);
             this.txt_UrunAg.TabIndex = 12;
@@ -110,7 +114,7 @@ namespace SiparisOtomasyon
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(525, 262);
+            this.label6.Location = new System.Drawing.Point(525, 353);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 25);
             this.label6.TabIndex = 11;
@@ -127,7 +131,7 @@ namespace SiparisOtomasyon
             // 
             // txt_fyt
             // 
-            this.txt_fyt.Location = new System.Drawing.Point(699, 186);
+            this.txt_fyt.Location = new System.Drawing.Point(699, 258);
             this.txt_fyt.Name = "txt_fyt";
             this.txt_fyt.Size = new System.Drawing.Size(125, 27);
             this.txt_fyt.TabIndex = 9;
@@ -136,7 +140,7 @@ namespace SiparisOtomasyon
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(525, 362);
+            this.label5.Location = new System.Drawing.Point(525, 468);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 25);
             this.label5.TabIndex = 8;
@@ -148,15 +152,15 @@ namespace SiparisOtomasyon
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(525, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 25);
+            this.label4.Size = new System.Drawing.Size(84, 25);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Seçilen Ürün";
+            this.label4.Text = "Ürün No";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(525, 185);
+            this.label3.Location = new System.Drawing.Point(525, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 25);
             this.label3.TabIndex = 6;
@@ -166,7 +170,7 @@ namespace SiparisOtomasyon
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(525, 112);
+            this.label2.Location = new System.Drawing.Point(525, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 25);
             this.label2.TabIndex = 4;
@@ -174,7 +178,7 @@ namespace SiparisOtomasyon
             // 
             // txt_adet
             // 
-            this.txt_adet.Location = new System.Drawing.Point(699, 113);
+            this.txt_adet.Location = new System.Drawing.Point(699, 176);
             this.txt_adet.Name = "txt_adet";
             this.txt_adet.Size = new System.Drawing.Size(125, 27);
             this.txt_adet.TabIndex = 3;
@@ -191,7 +195,7 @@ namespace SiparisOtomasyon
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(734, 471);
+            this.button1.Location = new System.Drawing.Point(747, 559);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 48);
             this.button1.TabIndex = 1;
@@ -264,6 +268,23 @@ namespace SiparisOtomasyon
             this.tabPage4.Text = "Kullanıcı Bilgileri";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(525, 116);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 25);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Ürün Adı";
+            // 
+            // txt_isim
+            // 
+            this.txt_isim.Location = new System.Drawing.Point(699, 114);
+            this.txt_isim.Name = "txt_isim";
+            this.txt_isim.Size = new System.Drawing.Size(125, 27);
+            this.txt_isim.TabIndex = 15;
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -305,5 +326,7 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListView lw_sepet;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_isim;
     }
 }

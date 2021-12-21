@@ -69,14 +69,14 @@ namespace SiparisOtomasyon
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
-                comboBox1.Items.Add(read["Name"]);
+                comboBox1.Items.Add(read["ID"]);
             }
             connection.Close();
         }
 
        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string sql = "select *from Product where Name ='" +comboBox1.Text+"';";
+            string sql = "select *from Product where ID ='" +comboBox1.Text+"';";
             SqlCommand komut = new SqlCommand(sql, connection);
             SqlDataReader myreader;
             try
@@ -85,12 +85,13 @@ namespace SiparisOtomasyon
                 myreader = komut.ExecuteReader();
                 while (myreader.Read())
                 {
-                    
-                    
+
+                    string name = myreader.GetString(1);
                     string description = myreader.GetString(2);
                     string agirlik = myreader.GetDouble(3).ToString();
                     string fiyat = myreader.GetDouble(4).ToString();
-                    
+
+                    txt_isim.Text = name;
                     txt_fyt.Text = fiyat;
                     txt_UrunAcik.Text = description;
                     txt_UrunAg.Text = agirlik;
