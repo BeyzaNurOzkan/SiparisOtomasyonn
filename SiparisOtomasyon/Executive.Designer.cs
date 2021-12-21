@@ -79,7 +79,7 @@ namespace SiparisOtomasyon
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(870, 376);
+            this.tabControl1.Size = new System.Drawing.Size(870, 429);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -102,7 +102,7 @@ namespace SiparisOtomasyon
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(862, 348);
+            this.tabPage1.Size = new System.Drawing.Size(862, 401);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ürün Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -248,16 +248,16 @@ namespace SiparisOtomasyon
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(862, 348);
+            this.tabPage2.Size = new System.Drawing.Size(862, 401);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ürünler";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnGüncelle
             // 
-            this.btnGüncelle.Location = new System.Drawing.Point(696, 306);
+            this.btnGüncelle.Location = new System.Drawing.Point(663, 331);
             this.btnGüncelle.Name = "btnGüncelle";
-            this.btnGüncelle.Size = new System.Drawing.Size(75, 23);
+            this.btnGüncelle.Size = new System.Drawing.Size(98, 32);
             this.btnGüncelle.TabIndex = 2;
             this.btnGüncelle.Text = "Güncelle";
             this.btnGüncelle.UseVisualStyleBackColor = true;
@@ -265,9 +265,9 @@ namespace SiparisOtomasyon
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(777, 306);
+            this.btnSil.Location = new System.Drawing.Point(767, 331);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.Size = new System.Drawing.Size(85, 32);
             this.btnSil.TabIndex = 1;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
@@ -276,10 +276,10 @@ namespace SiparisOtomasyon
             // ProductTable
             // 
             this.ProductTable.HideSelection = false;
-            this.ProductTable.Location = new System.Drawing.Point(3, 7);
+            this.ProductTable.Location = new System.Drawing.Point(6, 6);
             this.ProductTable.Name = "ProductTable";
             this.ProductTable.ShowItemToolTips = true;
-            this.ProductTable.Size = new System.Drawing.Size(849, 281);
+            this.ProductTable.Size = new System.Drawing.Size(849, 305);
             this.ProductTable.TabIndex = 0;
             this.ProductTable.UseCompatibleStateImageBehavior = false;
             // 
@@ -298,7 +298,7 @@ namespace SiparisOtomasyon
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(862, 348);
+            this.tabPage3.Size = new System.Drawing.Size(862, 401);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Kayıtlı Kişiler";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -354,9 +354,9 @@ namespace SiparisOtomasyon
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(766, 142);
+            this.button2.Location = new System.Drawing.Point(752, 138);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 30);
+            this.button2.Size = new System.Drawing.Size(89, 34);
             this.button2.TabIndex = 3;
             this.button2.Text = "Güncelle";
             this.button2.UseVisualStyleBackColor = true;
@@ -395,7 +395,7 @@ namespace SiparisOtomasyon
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(862, 348);
+            this.tabPage4.Size = new System.Drawing.Size(862, 401);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Gelen Siparişler";
             this.tabPage4.UseVisualStyleBackColor = true;
