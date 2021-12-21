@@ -46,8 +46,27 @@ namespace SiparisOtomasyon
             this.lw_urun = new System.Windows.Forms.ListView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.lw_sepet = new System.Windows.Forms.ListView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txt_Adres = new System.Windows.Forms.RichTextBox();
             this.txt_AdresBas = new System.Windows.Forms.TextBox();
@@ -60,9 +79,14 @@ namespace SiparisOtomasyon
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnÖdeme = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +99,7 @@ namespace SiparisOtomasyon
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(843, 593);
+            this.tabControl1.Size = new System.Drawing.Size(1010, 562);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -97,7 +121,7 @@ namespace SiparisOtomasyon
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(835, 565);
+            this.tabPage1.Size = new System.Drawing.Size(1002, 565);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Yeni Sipariş";
             // 
@@ -233,42 +257,224 @@ namespace SiparisOtomasyon
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(835, 565);
+            this.tabPage2.Size = new System.Drawing.Size(1002, 565);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Siparişlerim";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.lw_sepet);
+            this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(835, 565);
+            this.tabPage3.Size = new System.Drawing.Size(1002, 534);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Sepet";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.listView1);
+            this.groupBox4.Controls.Add(this.groupBox1);
+            this.groupBox4.Controls.Add(this.groupBox2);
+            this.groupBox4.Controls.Add(this.groupBox3);
+            this.groupBox4.Controls.Add(this.checkBox1);
+            this.groupBox4.Controls.Add(this.checkBox2);
+            this.groupBox4.Controls.Add(this.checkBox3);
+            this.groupBox4.Location = new System.Drawing.Point(6, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(993, 553);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Sepetim";
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(6, 22);
+            this.listView1.Name = "listView1";
+            this.listView1.ShowItemToolTips = true;
+            this.listView1.Size = new System.Drawing.Size(981, 308);
+            this.listView1.TabIndex = 6;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Location = new System.Drawing.Point(631, 401);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(356, 120);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nakit";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(159, 40);
+            this.label7.Location = new System.Drawing.Point(8, 37);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 19);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Sepet";
+            this.label7.Size = new System.Drawing.Size(46, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Toplam";
             // 
-            // lw_sepet
+            // groupBox2
             // 
-            this.lw_sepet.HideSelection = false;
-            this.lw_sepet.Location = new System.Drawing.Point(3, 66);
-            this.lw_sepet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lw_sepet.Name = "lw_sepet";
-            this.lw_sepet.Size = new System.Drawing.Size(378, 300);
-            this.lw_sepet.TabIndex = 0;
-            this.lw_sepet.UseCompatibleStateImageBehavior = false;
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Location = new System.Drawing.Point(337, 401);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(288, 120);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Çek İle Ödeme";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(80, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(152, 23);
+            this.textBox1.TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(80, 20);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(152, 23);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 15);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Toplam";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 54);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 15);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Hesap ID";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(7, 23);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 15);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "İsim";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Location = new System.Drawing.Point(6, 401);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(325, 120);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Kredi Kartı İle Ödeme";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(80, 23);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(229, 23);
+            this.textBox3.TabIndex = 4;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(242, 55);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(67, 23);
+            this.textBox4.TabIndex = 6;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(127, 55);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(71, 23);
+            this.textBox5.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(7, 87);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(46, 15);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Toplam";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(204, 58);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 15);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "CVV:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(7, 58);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(114, 15);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Son Kullanma Tarihi:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(7, 23);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 15);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Kart No:";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(631, 376);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(54, 19);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.Text = "Nakit";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(337, 376);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(46, 19);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Çek";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(6, 376);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(80, 19);
+            this.checkBox3.TabIndex = 0;
+            this.checkBox3.Text = "Kredi Kartı";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
@@ -286,7 +492,7 @@ namespace SiparisOtomasyon
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(835, 565);
+            this.tabPage4.Size = new System.Drawing.Size(1002, 565);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Kullanıcı Bilgileri";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -382,11 +588,22 @@ namespace SiparisOtomasyon
             this.label8.TabIndex = 0;
             this.label8.Text = "Adı Soyadı:";
             // 
+            // btnÖdeme
+            // 
+            this.btnÖdeme.Location = new System.Drawing.Point(917, 580);
+            this.btnÖdeme.Name = "btnÖdeme";
+            this.btnÖdeme.Size = new System.Drawing.Size(101, 35);
+            this.btnÖdeme.TabIndex = 1;
+            this.btnÖdeme.Text = "Ödeme Yap";
+            this.btnÖdeme.UseVisualStyleBackColor = true;
+            this.btnÖdeme.Click += new System.EventHandler(this.btnÖdeme_Click);
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 617);
+            this.ClientSize = new System.Drawing.Size(1034, 627);
+            this.Controls.Add(this.btnÖdeme);
             this.Controls.Add(this.tabControl1);
             this.Name = "User";
             this.Text = "Kullanıcı";
@@ -395,7 +612,14 @@ namespace SiparisOtomasyon
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
@@ -422,8 +646,6 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.TextBox txt_UrunAcik;
         private System.Windows.Forms.TextBox txt_UrunAg;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListView lw_sepet;
         private System.Windows.Forms.RichTextBox txt_Adres;
         private System.Windows.Forms.TextBox txt_AdresBas;
         private System.Windows.Forms.TextBox txt_Sifre;
@@ -435,5 +657,27 @@ namespace SiparisOtomasyon
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Button btnÖdeme;
     }
 }

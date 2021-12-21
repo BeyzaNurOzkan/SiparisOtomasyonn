@@ -75,7 +75,6 @@ namespace SiparisOtomasyon
             }
             connection.Close();
         }
-
        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string sql = "select *from Product where Name ='" +comboBox1.Text+"';";
@@ -106,13 +105,6 @@ namespace SiparisOtomasyon
             }
             
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Payment gec = new Payment();
-            gec.Show();
-        }
-
         private void btnGüncelle_Click(object sender, EventArgs e)
         {
             if (txt_AdiSoyadi.Text != "")
@@ -142,6 +134,11 @@ namespace SiparisOtomasyon
             {
                 MessageBox.Show("Ad Soyad boş bırakılamaz.", "YANLIŞ GİRİŞ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnÖdeme_Click(object sender, EventArgs e)
+        {
+
         }
     }   
 }
