@@ -56,23 +56,6 @@ namespace SiparisOtomasyon
             connection.Close();
             return false;
         }
-        public bool UserNameUsedControl(string UserName)
-        {
-            SqlCommand cmd = new SqlCommand("select COUNT(UserName) from Users where UserName=@UserName", connection);
-            cmd.Parameters.AddWithValue("@UserName", UserName);
-            connection.Open();
-            int userCount = (int)cmd.ExecuteScalar();
-            connection.Close();
-            if (userCount > 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
         public void UserAdd(string Name, string UserName, string Password, string AddressTitle, string Address, bool State)
         {
             this.Name = Name;

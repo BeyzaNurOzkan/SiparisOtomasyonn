@@ -58,7 +58,6 @@ namespace SiparisOtomasyon
             }
 
         }
-
         public void ProductAdd()
         {
             SqlCommand cmd = new SqlCommand("insert into Product(Name,Price,Description,Weight,Tax) values (@Name,@Price,@Description,@Weight,@Tax)", connection);

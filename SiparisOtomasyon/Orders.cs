@@ -23,8 +23,6 @@ namespace SiparisOtomasyon
         public DateTime CreateDate { get; set; }
         public int OrderState { get; set; }
         public int UserID { get; set; }
-        public int ProductID { get; set; }
-        private int AddressID { get; set;}
 
         public List<Orders> Order;
         public OrderDetail OrderDetail;
@@ -32,63 +30,6 @@ namespace SiparisOtomasyon
         public Credit Credit;
         public Cash Cash;
         public Check Check;
-        public double calcTax()
-        {
-            double taxTotal = OrderDetail.calcSubTotal() * OrderDetail.Tax;
-            return taxTotal;
-        }
-        public double calcTotal()
-        {
-            double priceTotal = OrderDetail.calcSubTotal() + calcTax();
-            return priceTotal;
-        }
-        public void CreditPayment(string Number, string ExpirationDate, int CVV, double Amount)
-        {
-            Credit = new Credit(Number, ExpirationDate, CVV);
-            Credit.Amount = Amount;
-        }
-        public void CashPayment(double Amount)
-        {
-            Cash = new Cash();
-            Cash.Amount = Amount;
-        }
-        public void CheckPayment(string bankID, double Amount)
-        {
-            Check = new Check(bankID);
-            Check.Amount = Amount;
-        }
-
-        public Orders(Product Product, int Quantity, int UserID, int AddressID)
-        {
-            OrderDetail = new OrderDetail(Product, Quantity);
-            this.ProductID = Product.ID;
-            this.UserID = UserID;
-            OrderState = 0;
-            CreateDate = DateTime.Today;
-            this.AddressID = AddressID;
-        }
-        public void OrderSave(string[,] address, int addressID)
-        {
-            SqlCommand cmd = new SqlCommand("insert into OrderDetails(date,state,ProductID,UserID,addressTitle,address,quantity,calcTax,priceTotal,weightTotal,Credit,Cash,CheckAmount) values (@date,@state,@ProductID,@UserID,@addressTitle,@address,@quantity,@calcTax,@priceTotal,@weightTotal,@Credit,@Cash,@Check)", connection);
-            cmd.Parameters.AddWithValue("@date", CreateDate);
-            cmd.Parameters.AddWithValue("@state", OrderState);
-            cmd.Parameters.AddWithValue("@ProductID", ProductID);
-            cmd.Parameters.AddWithValue("@UserID", UserID);
-            cmd.Parameters.AddWithValue("@addressTitle", address[addressID, 1]);
-            cmd.Parameters.AddWithValue("@quantity", OrderDetail.Quantity);
-            cmd.Parameters.AddWithValue("@calcTax", calcTax());
-            cmd.Parameters.AddWithValue("@priceTotal", calcTotal());
-            cmd.Parameters.AddWithValue("@weightTotal", OrderDetail.calcWeight());
-            if (Credit == null) cmd.Parameters.AddWithValue("@Credit", 0);
-            else cmd.Parameters.AddWithValue("@Credit", Credit.Amount);
-            if (Cash == null) cmd.Parameters.AddWithValue("@Cash", 0);
-            else cmd.Parameters.AddWithValue("@Cash", Cash.Amount);
-            if (Check == null) cmd.Parameters.AddWithValue("@Check", 0);
-            else cmd.Parameters.AddWithValue("@Check", Check.Amount);
-            connection.Open();
-            cmd.ExecuteNonQuery();
-            connection.Close();
-        }
         public void getOrderList()
         {
             SqlCommand cmd2 = new SqlCommand("select * from Orders join OrderDetails on OrderDetails.OrderId=Orders.ID join UserAddress on Orders.UserID=UserAddress.UserID join Payment on PaymentId=Orders.PaymentId", connection);
@@ -122,7 +63,6 @@ namespace SiparisOtomasyon
                     Status = (int)sdr2["Status"] });
             }
         }
-
         public Orders()
         {
             if (Order == null)
