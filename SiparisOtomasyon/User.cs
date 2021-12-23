@@ -92,7 +92,6 @@ namespace SiparisOtomasyon
                     string agirlik = myreader.GetDouble(3).ToString();
                     string fiyat = myreader.GetDouble(4).ToString();
 
-                    txt_isim.Text = name;
                     txt_fyt.Text = fiyat;
                     txt_UrunAcik.Text = description;
                     txt_UrunAg.Text = agirlik;
@@ -117,7 +116,7 @@ namespace SiparisOtomasyon
                         if (MessageBox.Show("Kullanıcı bilgilerini güncellemek istediğinize emin misiniz?", "GÜNCELLEME", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                         {
                             Users Users = new Users();
-                            Users.UserUpdate2(loginId, txt_AdiSoyadi.Text, txt_KullaniciAdi.Text, txt_Sifre.Text, txt_Adres.Text, txt_AdresBas.Text);
+                            Users.UserUpdate2(loginId, txt_AdiSoyadi.Text, txt_Sifre.Text, txt_KullaniciAdi.Text, txt_Adres.Text, txt_AdresBas.Text);
                             MessageBox.Show("Kullanıcı başarıyla güncellendi.", "GÜNCELLENDİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }

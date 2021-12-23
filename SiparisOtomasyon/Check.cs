@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SiparisOtomasyon
 {
-    public class Check : Payment
+    public class Check 
     {
         public string Name { get; set; }
         private string bankID { get; set; }
