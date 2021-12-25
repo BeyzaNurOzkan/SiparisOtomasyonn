@@ -31,13 +31,13 @@ namespace SiparisOtomasyon
         {
             this.btnGüncelle = new System.Windows.Forms.Button();
             this.txtİsim = new System.Windows.Forms.TextBox();
-            this.txtFiyat = new System.Windows.Forms.TextBox();
-            this.txtAgirlik = new System.Windows.Forms.TextBox();
-            this.txtAciklama = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtAciklama = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtAgirlik = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFiyat = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnGüncelle
@@ -57,28 +57,6 @@ namespace SiparisOtomasyon
             this.txtİsim.Size = new System.Drawing.Size(100, 23);
             this.txtİsim.TabIndex = 1;
             // 
-            // txtFiyat
-            // 
-            this.txtFiyat.Location = new System.Drawing.Point(92, 66);
-            this.txtFiyat.Name = "txtFiyat";
-            this.txtFiyat.Size = new System.Drawing.Size(100, 23);
-            this.txtFiyat.TabIndex = 2;
-            // 
-            // txtAgirlik
-            // 
-            this.txtAgirlik.Location = new System.Drawing.Point(92, 109);
-            this.txtAgirlik.Name = "txtAgirlik";
-            this.txtAgirlik.Size = new System.Drawing.Size(100, 23);
-            this.txtAgirlik.TabIndex = 3;
-            // 
-            // txtAciklama
-            // 
-            this.txtAciklama.Location = new System.Drawing.Point(269, 30);
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(153, 96);
-            this.txtAciklama.TabIndex = 4;
-            this.txtAciklama.Text = "";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -88,14 +66,22 @@ namespace SiparisOtomasyon
             this.label1.TabIndex = 5;
             this.label1.Text = "Ürün İsmi";
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Ürün Fiyatı";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(202, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Açıklama";
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.Location = new System.Drawing.Point(269, 30);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(153, 96);
+            this.txtAciklama.TabIndex = 4;
+            this.txtAciklama.Text = "";
             // 
             // label3
             // 
@@ -106,14 +92,28 @@ namespace SiparisOtomasyon
             this.label3.TabIndex = 7;
             this.label3.Text = "Ürün Ağırlığı";
             // 
-            // label4
+            // txtAgirlik
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(202, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Açıklama";
+            this.txtAgirlik.Location = new System.Drawing.Point(92, 109);
+            this.txtAgirlik.Name = "txtAgirlik";
+            this.txtAgirlik.Size = new System.Drawing.Size(100, 23);
+            this.txtAgirlik.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 15);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Ürün Fiyatı";
+            // 
+            // txtFiyat
+            // 
+            this.txtFiyat.Location = new System.Drawing.Point(92, 66);
+            this.txtFiyat.Name = "txtFiyat";
+            this.txtFiyat.Size = new System.Drawing.Size(100, 23);
+            this.txtFiyat.TabIndex = 2;
             // 
             // SelectedProductUpdate
             // 
@@ -140,12 +140,12 @@ namespace SiparisOtomasyon
 
         private System.Windows.Forms.Button btnGüncelle;
         private System.Windows.Forms.TextBox txtİsim;
-        private System.Windows.Forms.TextBox txtFiyat;
-        private System.Windows.Forms.TextBox txtAgirlik;
-        private System.Windows.Forms.RichTextBox txtAciklama;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox txtAciklama;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtAgirlik;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtFiyat;
     }
 }

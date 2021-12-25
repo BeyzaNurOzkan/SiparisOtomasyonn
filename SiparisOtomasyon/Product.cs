@@ -21,6 +21,7 @@ namespace SiparisOtomasyon
 
         public List<Product> Products;
         public double Tax { get; set; }
+        public int Quantity { get; set; }
         public Product()
         {
             if (Products == null)
@@ -40,7 +41,19 @@ namespace SiparisOtomasyon
             }
             connection.Close();
         }
+        public void getBasketProduct(int userId)
+        {
+            SqlCommand cmd = new SqlCommand("select * from BasketProduct join Product on Product.ID=BasketProduct.ProductId where UserId=@UserId", connection);
+            cmd.Parameters.AddWithValue("@UserId", userId);
+            connection.Open();
 
+            SqlDataReader sdr = cmd.ExecuteReader();
+            while (sdr.Read())
+            {
+                Products.Add(new Product { ID = Convert.ToInt32(sdr["ProductId"]), Name = Convert.ToString(sdr["Name"]), Price = Convert.ToDouble(sdr["Price"]), Description = Convert.ToString(sdr["Description"]), Weight = Convert.ToDouble(sdr["Weight"]), Tax = Convert.ToDouble(sdr["Tax"]), Quantity = Convert.ToInt32(sdr["Quantity"]) });
+            }
+            connection.Close();
+        }
         public int maxProductID()
         {
             SqlCommand cmd = new SqlCommand("select MAX(ID) from Product", connection);

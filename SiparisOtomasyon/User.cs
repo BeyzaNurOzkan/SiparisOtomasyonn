@@ -28,7 +28,7 @@ namespace SiparisOtomasyon
 
         public void urunlistele()
         {
-           Product = new Product();
+            Product = new Product();
             Product.getProduct();
             Products = Product.Products;
             lw_urun.Items.Clear();
@@ -40,6 +40,8 @@ namespace SiparisOtomasyon
             lw_urun.Columns.Add("Ağırlığı", 100);
             lw_urun.Columns.Add("Vergi Oranı", 100);
             lw_urun.Columns.Add("Açıklaması", 300);
+            lw_urun.Columns.Add("Fiyatı", 300);
+
             string Tax;
             for (int i = 0; i < Products.Count; i++)
             {
@@ -57,53 +59,108 @@ namespace SiparisOtomasyon
                     Products[i].Name,
                     Products[i].Weight.ToString()+" kg",
                     Tax,
-                    Products[i].Description
+                    Products[i].Description,
+                    Products[i].Price.ToString()
                 };
                 var listviewLine = new ListViewItem(row);
                 lw_urun.Items.Add(listviewLine);
             }
         }
+        public void sepetlistele()
+        {
+            Product = new Product();
+            Product.getBasketProduct(loginId);
+            Products = Product.Products;
+            BasketView.Items.Clear();
+            BasketView.View = View.Details;
+            BasketView.FullRowSelect = true;
+            BasketView.GridLines = true;
+            BasketView.Columns.Add("No", 50);
+            BasketView.Columns.Add("İsmi", 200);
+            BasketView.Columns.Add("Ağırlığı", 100);
+            BasketView.Columns.Add("Vergi Oranı", 100);
+            BasketView.Columns.Add("Açıklaması", 300);
+            BasketView.Columns.Add("Fiyatı", 100);
+            BasketView.Columns.Add("Miktarı", 100);
+
+
+            string Tax;
+           
+            for (int i = 0; i < Products.Count; i++)
+            {
+
+                if (Products[i].Tax == 0.01)
+                    Tax = "%1";
+                else if (Products[i].Tax == 0.08)
+                    Tax = "%8";
+                else
+                    Tax = "%18";
+
+                string[] row =
+                {
+                    Products[i].ID.ToString(),
+                    Products[i].Name,
+                    Products[i].Weight.ToString()+" kg",
+                    Tax,
+                    Products[i].Description,
+                    Products[i].Price.ToString(),
+                    Products[i].Quantity.ToString()
+
+                };
+                var listviewLine = new ListViewItem(row);
+                BasketView.Items.Add(listviewLine);
+            }
+        }
+        public void siparislistele()
+        {
+            Product = new Product();
+            Product.getBasketProduct(loginId);
+            Products = Product.Products;
+            BasketView.Items.Clear();
+            BasketView.View = View.Details;
+            BasketView.FullRowSelect = true;
+            BasketView.GridLines = true;
+            BasketView.Columns.Add("No", 50);
+            BasketView.Columns.Add("İsmi", 200);
+            BasketView.Columns.Add("Ağırlığı", 100);
+            BasketView.Columns.Add("Vergi Oranı", 100);
+            BasketView.Columns.Add("Açıklaması", 300);
+            BasketView.Columns.Add("Fiyatı", 100);
+            BasketView.Columns.Add("Miktarı", 100);
+
+
+            string Tax;
+
+            for (int i = 0; i < Products.Count; i++)
+            {
+
+                if (Products[i].Tax == 0.01)
+                    Tax = "%1";
+                else if (Products[i].Tax == 0.08)
+                    Tax = "%8";
+                else
+                    Tax = "%18";
+
+                string[] row =
+                {
+                    Products[i].ID.ToString(),
+                    Products[i].Name,
+                    Products[i].Weight.ToString()+" kg",
+                    Tax,
+                    Products[i].Description,
+                    Products[i].Price.ToString(),
+                    Products[i].Quantity.ToString()
+
+                };
+                var listviewLine = new ListViewItem(row);
+                BasketView.Items.Add(listviewLine);
+            }
+        }
         private void User_Load(object sender, EventArgs e)
         {
             urunlistele();
-            connection.Open();
-            SqlCommand komut = new SqlCommand("select *from Product", connection);
-            SqlDataReader read = komut.ExecuteReader();
-            while (read.Read())
-            {
-                comboBox1.Items.Add(read["ID"]);
-            }
-            connection.Close();
-        }
-       private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string sql = "select *from Product where ID ='" +comboBox1.Text+"';";
-            SqlCommand komut = new SqlCommand(sql, connection);
-            SqlDataReader myreader;
-            try
-            {
-                connection.Open();
-                myreader = komut.ExecuteReader();
-                while (myreader.Read())
-                {
-
-                    string name = myreader.GetString(1);
-                    string description = myreader.GetString(2);
-                    string agirlik = myreader.GetDouble(3).ToString();
-                    string fiyat = myreader.GetDouble(4).ToString();
-
-                    txt_fyt.Text = fiyat;
-                    txt_UrunAcik.Text = description;
-                    txt_UrunAg.Text = agirlik;
-
-
-                }
-                connection.Close();
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
+            sepetlistele();
+            siparislistele();
         }
         private void btnGüncelle_Click(object sender, EventArgs e)
         {
@@ -136,8 +193,28 @@ namespace SiparisOtomasyon
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string urunId= lw_urun.SelectedItems[0].SubItems[0].Text;
+            if (Application.OpenForms["Quantity"] == null)
+            {
+
+
+                Quantity quantity = new Quantity();
+                quantity.ProductId = urunId;
+                quantity.loginId = loginId;
+                        //uantity.Product = Products[i];
+                        //frmSelectedItemUpdate.MdiParent = Application.OpenForms["MainForm"];
+                quantity.Show();
+
+                   
+            }
+           
+        }
+
         private void btnÖdeme_Click(object sender, EventArgs e)
         {
+        
 
         }
     }   

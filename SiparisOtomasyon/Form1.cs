@@ -38,6 +38,7 @@ namespace SiparisOtomasyon
                     Executive Executive = new Executive();
                     Executive.Show();
                 }
+                //Close();
             }
             else
             {
